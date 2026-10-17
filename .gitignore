@@ -1,0 +1,64 @@
+# ==========================================
+# G-Codec Git Ignore Rules
+# ==========================================
+
+# 1. CMake & Build Artifacts
+build/
+build-*/
+cmake-build-*/
+out/
+bin/
+Release/
+Debug/
+x64/
+*.dir/
+
+# 2. Visual Studio & IDE Configurations
+.vs/
+*.sln.docstates
+*.suo
+*.user
+*.user.*
+*.vcxproj.user
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+
+# 3. Qt Creator & Tools
+*.autosave
+.qtcreator/
+CMakeLists.txt.user*
+*.qmlc
+*.jsc
+
+# 4. Compiled Binaries & Intermediates
+*.obj
+*.o
+*.exe
+*.dll
+*.so
+*.dylib
+*.pdb
+*.idb
+*.ilk
+*.exp
+*.lib
+*.a
+*.res
+*.pch
+*.tlog
+
+# 5. Test Media, Outputs & Logs
+test_sample.mp4
+test_matrix_outputs/
+test_matrix_result.log
+*.log
+*.zip
+*.7z
+*.tar.gz
+
+# 6. OS Generated Files
+Thumbs.db
+Desktop.ini
+.DS_Store

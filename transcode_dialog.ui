@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TranscodeDialog</class>
+ <widget class="QDialog" name="TranscodeDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>660</width>
+    <height>520</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>转码流水线配置 - G-Codec Pro</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    background-color: #0d0e12;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="dialogMainLayout">
+   <property name="spacing">
+    <number>12</number>
+   </property>
+   <property name="leftMargin">
+    <number>24</number>
+   </property>
+   <property name="topMargin">
+    <number>20</number>
+   </property>
+   <property name="rightMargin">
+    <number>24</number>
+   </property>
+   <property name="bottomMargin">
+    <number>20</number>
+   </property>
+   <item>
+    <widget class="QGroupBox" name="sourceGroupBox">
+     <property name="title">
+      <string> 源媒体参数概览 </string>
+     </property>
+     <layout class="QGridLayout" name="sourceGridLayout">
+      <property name="horizontalSpacing">
+       <number>16</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>8</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">color: #64748b; font-size: 11px;</string>
+        </property>
+        <property name="text">
+         <string>封装容器:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #38bdf8; font-weight: 700;</string>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_9">
+        <property name="styleSheet">
+         <string notr="true">color: #64748b; font-size: 11px;</string>
+        </property>
+        <property name="text">
+         <string>原始分辨率:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="label_10">
+        <property name="font">
+         <font>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #f8fafc; font-weight: 700;</string>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="label_5">
+        <property name="styleSheet">
+         <string notr="true">color: #64748b; font-size: 11px;</string>
+        </property>
+        <property name="text">
+         <string>源视频帧率:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QLabel" name="label_6">
+        <property name="font">
+         <font>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #f8fafc; font-weight: 700;</string>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="styleSheet">
+         <string notr="true">color: #64748b; font-size: 11px;</string>
+        </property>
+        <property name="text">
+         <string>视频编码:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_4">
+        <property name="font">
+         <font>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #38bdf8; font-weight: 700;</string>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_7">
+        <property name="styleSheet">
+         <string notr="true">color: #64748b; font-size: 11px;</string>
+        </property>
+        <property name="text">
+         <string>视频码率:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="label_8">
+        <property name="styleSheet">
+         <string notr="true">color: #cbd5e1;</string>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QLabel" name="label_11">
+        <property name="styleSheet">
+         <string notr="true">color: #64748b; font-size: 11px;</string>
+        </property>
+        <property name="text">
+         <string>音频流:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QLabel" name="label_17">
+        <property name="styleSheet">
+         <string notr="true">color: #cbd5e1;</string>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_13">
+        <property name="styleSheet">
+         <string notr="true">color: #64748b; font-size: 11px;</string>
+        </property>
+        <property name="text">
+         <string>音频采样率:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="label_19">
+        <property name="styleSheet">
+         <string notr="true">color: #cbd5e1;</string>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_14">
+        <property name="styleSheet">
+         <string notr="true">color: #64748b; font-size: 11px;</string>
+        </property>
+        <property name="text">
+         <string>声道数:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLabel" name="label_20">
+        <property name="styleSheet">
+         <string notr="true">color: #cbd5e1;</string>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QLabel" name="label_12">
+        <property name="styleSheet">
+         <string notr="true">color: #64748b; font-size: 11px;</string>
+        </property>
+        <property name="text">
+         <string>音频码率:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="5">
+       <widget class="QLabel" name="label_18">
+        <property name="styleSheet">
+         <string notr="true">color: #cbd5e1;</string>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="videoGroupBox">
+     <property name="title">
+      <string> 目标输出与视频设置 </string>
+     </property>
+     <layout class="QGridLayout" name="videoGridLayout">
+      <property name="horizontalSpacing">
+       <number>14</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>10</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="lblFormat">
+        <property name="text">
+         <string>目标封装格式:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="formatCombo">
+        <property name="placeholderText">
+         <string>请选择目标封装格式</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="lblVideoCodec">
+        <property name="text">
+         <string>视频编码器 (NVENC优先):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QComboBox" name="videoCodecCombo"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lblResolution">
+        <property name="text">
+         <string>目标输出分辨率:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="resolutionCombo"/>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="lblFramerate">
+        <property name="text">
+         <string>目标视频帧率:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QComboBox" name="framerateCombo"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="lblVideoBitrate">
+        <property name="text">
+         <string>视频目标码率:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="videoBitrateCombo"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="audioGroupBox">
+     <property name="title">
+      <string> 目标音频设置 </string>
+     </property>
+     <layout class="QGridLayout" name="audioGridLayout">
+      <property name="horizontalSpacing">
+       <number>14</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>10</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="lblAudioCodec">
+        <property name="text">
+         <string>音频编码器:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="audioCodecCombo"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="lblAudioBitrate">
+        <property name="text">
+         <string>音频目标码率:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QComboBox" name="audioBitrateCombo"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lblAudioSample">
+        <property name="text">
+         <string>音频采样率:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="audioSampleCombo"/>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="lblAudioChannel">
+        <property name="text">
+         <string>目标声道数:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QComboBox" name="audioChannelCombo"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacerBottom">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>12</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="bottomActionsLayout">
+     <item>
+      <spacer name="horizontalSpacerBottom">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>TranscodeDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>TranscodeDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
