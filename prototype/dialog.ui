@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>520</width>
+    <height>366</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>请先选择封装格式</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>当前封装格式</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="4">
+    <widget class="QComboBox" name="formatCombo">
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>请选择目标封装格式</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>请选择目标封装格式</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>MP4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>MKV</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>MOV</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WebM</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>当前视频编码格式</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="4">
+    <widget class="QComboBox" name="videoCodecCombo">
+     <property name="placeholderText">
+      <string>请选择目标视频编码格式</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>当前视频帧率</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="4">
+    <widget class="QComboBox" name="framerateCombo">
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>目标视频帧率</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>默认</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>24fps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>30fps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>60fps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>120fps</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>当前视频码率</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QLabel" name="label_8">
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="4">
+    <widget class="QComboBox" name="videoBitrateCombo">
+     <property name="placeholderText">
+      <string>目标视频码率</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>默认</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3000kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>6000kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>10000kbps</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>20000kbps</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_9">
+     <property name="text">
+      <string>当前视频分辨率</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
+    <widget class="QLabel" name="label_10">
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4">
+    <widget class="QComboBox" name="resolutionCombo">
+     <property name="placeholderText">
+      <string>目标视频分辨率</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>默认</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>854 × 480</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1280 × 720</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1920 × 1080</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2560 × 1440</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3840 × 2160</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>720 × 1280</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1080 × 1920</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1440 × 2560</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QLabel" name="label_17">
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="4">
+    <widget class="QComboBox" name="audioCodecCombo">
+     <property name="placeholderText">
+      <string>请选择目标音频编码格式</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_13">
+     <property name="text">
+      <string>当前音频码率</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2">
+    <widget class="QLabel" name="label_18">
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="4">
+    <widget class="QComboBox" name="audioBitrateCombo">
+     <property name="placeholderText">
+      <string>目标音频码率</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>默认</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>96k</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>128k</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>192k</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>320k</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="label_14">
+     <property name="text">
+      <string>当前音频采样率</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="2">
+    <widget class="QLabel" name="label_19">
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="4">
+    <widget class="QComboBox" name="audioSampleCombo">
+     <property name="placeholderText">
+      <string>目标音频采样率</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>默认</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>8000 Hz</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>22050 Hz</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>44100 Hz</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>48000 Hz</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>96000 Hz</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>192000 Hz</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="label_15">
+     <property name="text">
+      <string>当前音频声道数</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="2">
+    <widget class="QLabel" name="label_20">
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="4">
+    <widget class="QComboBox" name="audioChannelCombo">
+     <property name="placeholderText">
+      <string>目标音频声道数</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>默认</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="9" column="0" colspan="5" alignment="Qt::AlignmentFlag::AlignHCenter">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="layoutDirection">
+      <enum>Qt::LayoutDirection::LeftToRight</enum>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+     </property>
+     <property name="centerButtons">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-5</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>当前音频编码格式</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
